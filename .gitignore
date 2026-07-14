@@ -31,7 +31,18 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+.env
+.env.local
 .env*
+
+# Editor-specific files (other developers use different editors)
+.vscode/settings.json
+.idea/
+*.swp
+
+# Windows-specific files
+Thumbs.db
+Desktop.ini
 
 # vercel
 .vercel
