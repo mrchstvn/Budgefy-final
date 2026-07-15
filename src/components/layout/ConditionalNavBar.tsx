@@ -1,7 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import NavBar from "@/components/layout/NavBar";
+import { usePathname } from "next/navigation";
+
 export default function ConditionalNavBar() {
   const showNavBar = ["/", "/login", "/register"];
   const pathname = usePathname();

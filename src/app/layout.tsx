@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { inter, lato } from "@/components/fonts/font";
+
 import "./globals.css";
+
+import { lato } from "@/components/fonts/fonts";
 import ConditionalNavBar from "@/components/layout/ConditionalNavBar";
 
 export const metadata: Metadata = {
@@ -14,14 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${lato.className} ${inter.className} h-full antialiased`}
-    >
+    <html lang="en" className={`${lato.className} antialiased h-full`}>
       <body className="min-h-full flex flex-col">
         <ConditionalNavBar />
-
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );
